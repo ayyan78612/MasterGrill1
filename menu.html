@@ -1,0 +1,671 @@
+﻿<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Master Grill</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: var(--light-gray);
+        }
+        .menu-page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .menu-page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .menu-page-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+        .menu-page-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+        .menu-category {
+            background-color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        .menu-category h2 {
+            font-size: 1.6rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--accent-orange);
+            padding-bottom: 0.7rem;
+        }
+        .menu-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .menu-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.2rem;
+            border-left: 5px solid var(--accent-orange);
+            background-color: #fafafa;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .menu-item:hover {
+            background-color: #f0f0f0;
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item-image {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            background-color: #f0f0f0;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .menu-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .menu-item-content {
+            flex: 1;
+        }
+        .menu-item-name {
+            font-weight: 700;
+            color: var(--dark-black);
+            font-size: 1.05rem;
+            margin-bottom: 0.3rem;
+        }
+        .menu-item-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.4rem;
+            font-style: italic;
+        }
+        .menu-item-price {
+            color: var(--primary-red);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: var(--dark-black);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+        .back-button i {
+            margin-right: 8px;
+        }
+        @media (max-width: 768px) {
+            .menu-page-header h1 {
+                font-size: 1.8rem;
+            }
+            .menu-category {
+                padding: 1.5rem;
+            }
+            .menu-category h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-page-container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Torna alla Home
+        </a>
+
+        <div class="menu-page-header">
+            <h1>Master Grill</h1>
+            <p>Menu Completo</p>
+        </div>
+
+        <!-- ANTIPASTI -->
+        <div class="menu-category">
+            <h2>🥟 ANTIPASTI</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.unileverfoodsolutions.com.ph/dam/global-ufs/mcos/SEA/calcmenu/recipes/PH-recipes/appetisers/vegetable-samosa/vegetable-samosa-main.jpg"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Veg Samosa (2 pezzi)</div>
+                        <div class="menu-item-desc">Fagottini croccanti ripieni di verdure miste</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.whiskaffair.com/wp-content/uploads/2020/08/Paneer-Pakora-2-3.jpg" ></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Paneer Pakora (4 pezzi)</div>
+                        <div class="menu-item-desc">Paneer (formaggio indiano) fritto in pastella di farina di ceci</div>
+                        <div class="menu-item-price">4,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDhZII0QLw3-TvbsDddfQYIoCytuM3CweuMQ&s" ></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Papadum (2 pezzi)</div>
+                        <div class="menu-item-desc">Sfoglie croccanti a base di legumi</div>
+                        <div class="menu-item-price">1,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://holycowvegan.net/wp-content/uploads/2025/04/vegetable-pakora-42.jpeg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Pakora (2 pezzi)</div>
+                        <div class="menu-item-desc">Verdure miste fritte in pastella di farina di ceci</div>
+                        <div class="menu-item-price">2,50 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4tYa2t8PhT57wtT0lWn9P-cCGHqcsk9OIEg&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Masala Fish con patatine</div>
+                        <div class="menu-item-desc">Filetto di merluzzo fritto speziato, servito con patatine</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.justataste.com/wp-content/uploads/2012/12/chicken-spring-rolls-2024.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Roll (2 pezzi)</div>
+                        <div class="menu-item-desc">Involtini fritti ripieni di pollo, peperoni e cipollotto</div>
+                        <div class="menu-item-price">2,50 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://st3.depositphotos.com/29384342/33648/i/450/depositphotos_336481490-stock-photo-plate-french-fries-potatoes-served.jpg"></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Patatine fritte</div>
+                        <div class="menu-item-price">S 2,00 €</div>
+                        <div class="menu-item-price">M 4,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTORNI -->
+        <div class="menu-category">
+            <h2>🥗 CONTORNI</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.lamattamadeinsicily.com/wp-content/uploads/2024/05/INSALATA-MISTA-2.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Insalata mista</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.indianveggiedelight.com/wp-content/uploads/2017/06/cucumber-raita-recipe-featured.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Raita</div>
+                        <div class="menu-item-desc">Yogurt con verdure fresche e spezie</div>
+                        <div class="menu-item-price">2,50 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALLA GRIGLIA -->
+        <div class="menu-category">
+            <h2>🔥 ALLA GRIGLIA (Tandoor & Grill)</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerbasMI4sq8BABdno0LtQStNEUNUBYrkvisa8Iu1andWIH5w4oh319P08pxRyd1WHLwlPvWB4BmqZ5ptgqZlR-aEIcGqhfl3e3-QE3yzIRWM_9Ak9ZHlQHwBWSc31v1NZVXTgvmmY8DJLJm=s680-w680-h510-rw" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Plater</div>
+                        <div class="menu-item-desc">Chicken tikka, malai boti, seekh kebab, mutton chaap, half charga, green boti wings</div>
+                        <div class="menu-item-price">M 60,00 €</div>
+                        <div class="menu-item-price">L 90,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://i.ytimg.com/vi/nYBztlmoXHU/maxresdefault.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Lahori Charga</div>
+                        <div class="menu-item-desc">Pollo intero senza pelle marinato con yogurt e spezie</div>
+                        <div class="menu-item-price">21,50 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.kitchensanctuary.com/wp-content/uploads/2025/07/Tandoori-Chicken-Square-FS.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Tandoori (1 pezzo)</div>
+                        <div class="menu-item-desc">Coscia di pollo marinata e cotta nel forno tandoor</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.eitanbernath.com/wp-content/uploads/2020/10/Chicken-Tikka-LOW-RES-1.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Tikka</div>
+                        <div class="menu-item-desc">Bocconcini di pollo marinati e grigliati</div>
+                        <div class="menu-item-price">Tandoor: 10pz 10,00 €</div>
+                        <div class="menu-item-price">Griglia: 8pz 10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://cloveandcumin.com/wp-content/uploads/2024/02/Chicken-Seekh-Kabab-500x375.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Seekh Kebab (4 pezzi)</div>
+                        <div class="menu-item-desc">Spiedini di pollo macinato speziato</div>
+                        <div class="menu-item-price">12,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://butteroverbae.com/wp-content/uploads/2021/11/mutton-chaap-closeup.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Mutton Chaap (4 pezzi)</div>
+                        <div class="menu-item-desc">Costolette di agnello marinate e grigliate</div>
+                        <div class="menu-item-price">15,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.allrecipes.com/thmb/nqBDLi0NrrYCm464cTH7jhxv9_I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8145753-5f66429f57af4a62aade3adf71dc28d3.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Beef Seekh Kebab (4 pezzi)</div>
+                        <div class="menu-item-desc">Spiedini di manzo speziato</div>
+                        <div class="menu-item-price">12,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbcvJZm-5YHpNkkTeMaDBxhPqC62-Yb08n-A&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Green Boti (10 pezzi)</div>
+                        <div class="menu-item-desc">Bocconcini di pollo marinati alle erbe e spezie verdi</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://static.toiimg.com/thumb/84440388.cms?imgsize=316352&width=800&height=800" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Malai Boti (10 pezzi)</div>
+                        <div class="menu-item-desc">Bocconcini di pollo marinati con panna, yogurt e spezie, cotti al tandoor</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://zaviyarestaurant.com/wp-content/uploads/elementor/thumbs/bbq-fish-q79rerla5s74euz8a4ocaidom1e4cbdayg22on5fog.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Fish Grill ⭐ Popolare</div>
+                        <div class="menu-item-desc">Merluzzo marinato e cotto al tandoor</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PIATTI PRINCIPALI -->
+        <div class="menu-category">
+            <h2>🍛 PIATTI PRINCIPALI</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/02/butter-chicken-ac2ff98.jpg?quality=90&resize=440,400" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Butter Chicken</div>
+                        <div class="menu-item-desc">Pollo in salsa cremosa di pomodoro, burro e spezie</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://adm.madyafoodz.sg//Dynamic/Products/376/Images/Mutton%20Curry.jpeg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Mutton Curry</div>
+                        <div class="menu-item-desc">Agnello in salsa di pomodoro e spezie</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.allrecipes.com/thmb/ae8jl9wgtmKPGCuOpNpTnfHgTWA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-231026-keema-aloo-DDMFS-beauty-4x3-6a2d9117370b4383b8b829c79b539501.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Keema Aloo</div>
+                        <div class="menu-item-desc">Carne macinata di manzo con patate e spezie</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.seriouseats.com/thmb/DbQHUK2yNCALBnZE-H1M2AKLkok=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-masala-for-the-grill-recipe-hero-2_1-cb493f49e30140efbffec162d5f2d1d7.JPG" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Tikka Masala</div>
+                        <div class="menu-item-desc">Pollo tandoori in salsa speziata al pomodoro</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.sugarspicenmore.com/wp-content/uploads/2021/04/Boneless-Chicken-karahi-5-1.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Boneless</div>
+                        <div class="menu-item-desc">Pollo senza ossa in salsa di pomodoro, yogurt e spezie</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2rEXpWcwmQDiQ4JqhbxKmvEgU3HDJuWKgDVBkF9a4zlIW2IPq" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Mutton Karahi</div>
+                        <div class="menu-item-desc">Agnello saltato con pomodoro, yogurt e spezie</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://savvybites.co.uk/wp-content/uploads/2024/01/Slow-cooker-chicken-Korma-1-2-500x500.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Korma</div>
+                        <div class="menu-item-desc">Pollo in salsa delicata e cremosa</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2024/12/Chicken-Karahi-847828f.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Karahi</div>
+                        <div class="menu-item-desc">Pollo con pomodoro, yogurt e spezie</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.teaforturmeric.com/wp-content/uploads/2022/02/Chicken-Jalfrezi-13.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Jalfrezi</div>
+                        <div class="menu-item-desc">Pollo con peperoni, cipolle e spezie</div>
+                        <div class="menu-item-price">12,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.kitchensanctuary.com/wp-content/uploads/2015/09/Spicy-Beef-Curry-square.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Beef Curry</div>
+                        <div class="menu-item-desc">Manzo in salsa al curry</div>
+                        <div class="menu-item-price">7,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.kitchensanctuary.com/wp-content/uploads/2020/02/Chicken-Madras-square-FS-35.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Madras</div>
+                        <div class="menu-item-desc">Pollo cucinato in salsa piccante</div>
+                        <div class="menu-item-price">9,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SPECIAL MIX -->
+        <div class="menu-category">
+            <h2>🥬 SPECIAL MIX</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://fullofplants.com/wp-content/uploads/2024/06/easy-vegan-dal-palak-spinach-with-chickpeas-thumb.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Dal Palak</div>
+                        <div class="menu-item-desc">Lenticchie con spinaci e spezie</div>
+                        <div class="menu-item-price">7,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://shwetainthekitchen.com/wp-content/uploads/2023/03/mixed-vegetable-curry.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Mix Veg</div>
+                        <div class="menu-item-desc">Verdure miste speziate</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://fatimacooks.net/wp-content/uploads/2020/03/Dal-Chicken.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Dal</div>
+                        <div class="menu-item-desc">Pollo con lenticchie speziate</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://untoldrecipesbynosheen.com/wp-content/uploads/2025/09/Palak-Chicken-featured-1.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Palak</div>
+                        <div class="menu-item-desc">Pollo con spinaci e spezie</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZuzJD5GiEjecr7DB4O5pF5wCtsgCnqGOXbQ&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Palak Gosht</div>
+                        <div class="menu-item-desc">Agnello con spinaci e spezie</div>
+                        <div class="menu-item-price">12,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/06/baingan-bharta.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Baingan Bharta</div>
+                        <div class="menu-item-desc">Crema di melanzane speziate</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://healthynibblesandbits.com/wp-content/uploads/2020/01/Saag-Paneer-FF-500x500.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Palak Paneer</div>
+                        <div class="menu-item-desc">Spinaci con paneer (formaggio indiano)</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAL / LEGUMI -->
+        <div class="menu-category">
+            <h2>🫘 DAL / LEGUMI</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGumTFAYcSpY0_pJLiE0cvIrw5YrlAbOCymA&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Dal Makhani</div>
+                        <div class="menu-item-desc">Lenticchie nere con burro e panna</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chana-masala-fb809bc.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chana Curry</div>
+                        <div class="menu-item-desc">Ceci al curry</div>
+                        <div class="menu-item-price">5,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://shwetainthekitchen.com/wp-content/uploads/2023/01/chana-dal.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Dal Chana</div>
+                        <div class="menu-item-desc">Ceci speziati</div>
+                        <div class="menu-item-price">5,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAAN & PANE -->
+        <div class="menu-category">
+            <h2>🫓 NAAN & PANE</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://usercontent.one/wp/www.themadraslounge.se/wp-content/uploads/2024/03/Fourseason-PLAIN-NAAN.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Plain Naan</div>
+                        <div class="menu-item-price">1,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.simplyrecipes.com/thmb/kfKdjryQIBH-MkGQXqN9mSfu-Yc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Roti-LEAD-3-38a1295fbb884aaabd42a34bcad9ea82.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Roti</div>
+                        <div class="menu-item-price">1,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://somebodyfeedseb.com/wp-content/uploads/2024/04/Square-2024.03.23-Cheese-garlic-naan-2444.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Cheese Naan</div>
+                        <div class="menu-item-price">2,50 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxu7EL4I3YHcOi5-VR1UrZZVm8DuDX1ljdGw&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Garlic Naan</div>
+                        <div class="menu-item-price">2,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.chilitochoc.com/wp-content/uploads/2025/03/keema-naan-recipe.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Keema Naan</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://thesassyfoodie.com/wp-content/uploads/2022/06/aloo-naan-11.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Aloo Naan</div>
+                        <div class="menu-item-price">2,50 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RISO -->
+        <div class="menu-category">
+            <h2>🍚 RISO</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUkFl4-e90gihmLEM7TZZ-LTbwkWQ47VaLMQ&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Chicken Biryani</div>
+                        <div class="menu-item-desc">Riso speziato con pollo</div>
+                        <div class="menu-item-price">8,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://myfoodstory.com/wp-content/uploads/2021/08/Mutton-Yakhni-Pulao-2-500x500.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Mutton Pulao</div>
+                        <div class="menu-item-desc">Riso con agnello e spezie</div>
+                        <div class="menu-item-price">10,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.cookingcarnival.com/wp-content/uploads/2025/09/Vegetable-Dum-Biryani-5.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Veg Biryani</div>
+                        <div class="menu-item-desc">Riso con verdure speziate</div>
+                        <div class="menu-item-price">6,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://media-assets.lacucinaitaliana.it/photos/696a37622cba3799bfb4fef0/16:9/w_2560%2Cc_limit/2185407626" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Riso bianco</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOLCI -->
+        <div class="menu-category">
+            <h2>🍰 DOLCI</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQVE96VG5flG7YY53IrqiPFLdd27U1DTKnOw&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Fruit Trifle</div>
+                        <div class="menu-item-desc">Crema, frutta fresca e panna montata</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://www.cookwithmanali.com/wp-content/uploads/2015/01/Gajar-Halwa-Indian.jpg" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Gajar Halwa</div>
+                        <div class="menu-item-desc">Dessert caldo di carote cotte nel latte con cardamomo, ghee e frutta secca</div>
+                        <div class="menu-item-price">4,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi9Z3WAfFCWuKV8M26_RLDZfQ3I5SfnhDjOA&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Firni</div>
+                        <div class="menu-item-desc">Budino di riso aromatizzato al cardamomo, decorato con frutta secca</div>
+                        <div class="menu-item-price">3,00 €</div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwmgkiI2i3LvwqckALjvok0GYi1rLur8JQig&s" alt=""></div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-name">Falooda</div>
+                        <div class="menu-item-desc">Dessert/bevanda fredda a base di latte, sciroppo di rosa, vermicelli, semi di basilico e gelato</div>
+                        <div class="menu-item-price">4,00 €</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEVANDE -->
+        <div class="menu-category">
+            <h2>🥤 BEVANDE</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <div class="menu-item-name">Coca-Cola lattina</div>
+                    <div class="menu-item-price">2,60 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Coca-Cola vetro</div>
+                    <div class="menu-item-price">3,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Coca-Cola 1,5L</div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Fanta lattina</div>
+                    <div class="menu-item-price">2,60 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Fanta 1,5L</div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Sprite 1,5L</div>
+                    <div class="menu-item-price">4,00 €</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-name">Acqua 1L</div>
+                    <div class="menu-item-price">2,50 €</div>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button" style="margin-top: 2rem;">
+            <i class="fas fa-arrow-left"></i>
+            Torna alla Home
+        </a>
+    </div>
+</body>
+</html>
